@@ -1,21 +1,42 @@
-document.getElementById('bmiForm').addEventListener('submit', function(event){
+    document.getElementById('bmiForm').addEventListener('submit', function(event){
     event.preventDefault();
 
     const weight = document.getElementById('weight').value;
     const height = document.getElementById('height').value / 100;
+    const age = document.getElementById('age').value;
+    const gender = document.getElementById('gender').value;
+    const nome = document.getElementById('nome').value || '';
+    const descrizione = document.getElementById('descrizione');
 
     const bmi = (weight / (height * height)).toFixed(2);
-    document.getElementById('bmiResult').textContent = bmi;
-
+    document.getElementById('bmiResult').innerHTML = `Risultato BMI: <span class="bmiValue">${bmi}</span>`;
     let status;
-    if (bmi < 18.5) {
-        status = 'Sottopeso';
-    } else if (bmi >= 18.5 && bmi <= 24.9) {
-        status = 'Normopeso';
-    } else {
-        status = 'Sovrappeso';
+
+    // Valori per le soglie del BMI
+    if (gender === 'male') {
+        if (age < 18) {
+            // Giovani maschi
+            status = bmi < 18.5 ? 'Sottopeso' : (bmi >= 18.5 && bmi < 25) ? 'Normopeso' : 'Sovrappeso';
+        } else if (age <= 65) {
+            // Uomini adulti
+            status = bmi < 20.7 ? 'Sottopeso' : (bmi >= 20.7 && bmi < 26.4) ? 'Normopeso' : 'Sovrappeso';
+        } else {
+            // Uomini anziani
+            status = bmi < 23 ? 'Sottopeso' : (bmi >= 23) ? 'Normopeso' : 'Sovrappeso';
+        }
+    } else { // Femmina
+        if (age < 18) {
+            // Giovani femmine
+            status = bmi < 18.5 ? 'Sottopeso' : (bmi >= 18.5 && bmi < 25) ? 'Normopeso' : 'Sovrappeso';
+        } else if (age <= 65) {
+            // Donne adulte
+            status = bmi < 19.1 ? 'Sottopeso' : (bmi >= 19.1 && bmi < 25.8) ? 'Normopeso' : 'Sovrappeso';
+        } else {
+            // Donne anziane
+            status = bmi < 25 ? 'Sottopeso' : (bmi >= 25) ? 'Normopeso' : 'Sovrappeso';
+        }
     }
 
-    document.getElementById('bmiStatus').textContent = status;
+    document.getElementById('bmiStatus').innerHTML = `Condizione: <span class="statusValue">${status}</span>`;
+    descrizione.innerHTML = `Ciao ${nome}, ti informo che in base ai dati che ci hai fornito il tuo indice di massa corporea è <span class="bmiValue">${bmi}</span>. Sei in una condizione di <span class="statusValue">${status}</span>.`;
 });
-

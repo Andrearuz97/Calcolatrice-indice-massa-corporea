@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+body{
+    font-family: 'Oswald', sans-serif;
+    background-image:url(../img/bg-image.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #333;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="number"], select {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+select:focus, input:focus{
+box-shadow: none !important;
+outline: none;
+border: none;
+}
+.btn {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.bmiValue {
+    font-weight: bold;
+    color: rgb(244, 12, 12);
+}
+
+.statusValue {
+    font-style: bolder;
+    color:green;
+}
+form label{
+    font-weight:600;
+}
