@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-html, body{
+ body, main{
     font-family: 'Oswald', sans-serif;
     background-image:url(../img/bg-image.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #333;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 main {
-  flex: 1;
   display: flex;
-  justify-content: flex-start;
+  flex: 1;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 80vh;
-
 }
 .container2{
    text-align: center;
@@ -108,10 +106,6 @@ footer{
     text-align: center;
    
 }
-.container:last-child {
-    margin-bottom: 2rem;
-}
-
 .footer-contacts {
     margin-bottom: 1rem;
     color: white;
