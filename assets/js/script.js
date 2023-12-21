@@ -5,11 +5,11 @@
     const height = document.getElementById('height').value / 100;
     const age = document.getElementById('age').value;
     const gender = document.getElementById('gender').value;
-    const nome = document.getElementById('nome').value || '';
+    const nome = document.getElementById('nome').value;
     const descrizione = document.getElementById('descrizione');
-
+    const results = document.getElementById('allResults');
     const bmi = (weight / (height * height)).toFixed(2);
-    document.getElementById('bmiResult').innerHTML = `Risultato BMI: <span class="bmiValue">${bmi}</span>`;
+    const reset = document.getElementById('resetButton');
     let status;
 
     // Valori per le soglie del BMI
@@ -37,6 +37,12 @@
         }
     }
 
+    document.getElementById('bmiResult').innerHTML = `Risultato BMI: <span class="bmiValue">${bmi}</span>`;
+    
     document.getElementById('bmiStatus').innerHTML = `Condizione: <span class="statusValue">${status}</span>`;
-    descrizione.innerHTML = `Ciao ${nome}, ti informo che in base ai dati che ci hai fornito il tuo indice di massa corporea è <span class="bmiValue">${bmi}</span>. Sei in una condizione di <span class="statusValue">${status}</span>.`;
+    descrizione.innerHTML = `Ciao ${nome}, ti informo che in base ai dati che ci hai fornito il tuo indice di massa corporea è di <span class="bmiValue">${bmi}</span>. Sei in una condizione di <span class="statusValue">${status}</span>.`;
+
+    reset.addEventListener('click', function(){
+        results.innerHTML = ''
+    })
 });
