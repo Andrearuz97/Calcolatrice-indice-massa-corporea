@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
- body, main{
+ body{
     font-family: 'Oswald', sans-serif;
     background-image:url(../img/bg-image.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #333;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -21,6 +21,9 @@ main {
 .container2{
    text-align: center;
    margin-block: 2rem;
+   h1,h2{
+    margin: 0;
+   }
 }
 .container {
     display: inline-block;
