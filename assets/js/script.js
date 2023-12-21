@@ -46,3 +46,7 @@
         results.innerHTML = ''
     })
 });
+//anno aggiornato
+    let date = new Date().getFullYear();
+    let anno = document.getElementById('anno');
+    anno.innerText = date;

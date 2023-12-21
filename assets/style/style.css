@@ -6,8 +6,6 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #333;
-    height: 100vh;
-   
 }
 main {
   display: flex;
@@ -94,4 +92,45 @@ form label{
 .descrizione{
     display: flex;
     flex-direction: column;
+}
+footer{
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+   
+}
+.footer-contacts {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-contacts a {
+    margin-right: 10px;
+    display: inline-block;
+}
+.footer-contacts i {
+    font-size: 1.5rem;
+    color: white;
+    transition: ease 1s;
+   
+}
+.footer-contacts i:active{
+    color: red;
+}
+@media (min-width: 900px) {
+.footer-contacts i:hover{
+    transform: scale(1.6);
+    transition: ease 1s;
+    color: green;
+   
+}
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #ccc;
 }
