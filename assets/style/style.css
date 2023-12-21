@@ -100,6 +100,7 @@ form label{
     flex-direction: column;
 }
 footer{
+    margin-top: auto;
     background-color: #333;
     width: 100%;
     padding: 1rem;
