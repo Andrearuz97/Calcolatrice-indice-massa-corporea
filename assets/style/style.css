@@ -18,6 +18,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 1rem;
 }
 .container2{
    text-align: center;
@@ -102,7 +103,7 @@ form label{
 footer{
     position: absolute;
     bottom: 0;
-    margin-top: 1rem;
+    margin-top: auto;
     background-color: #333;
     width: 100%;
     padding: 1rem;
