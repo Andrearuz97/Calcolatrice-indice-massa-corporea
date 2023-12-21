@@ -17,6 +17,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1.1rem;
 }
 .container2{
    text-align: center;
@@ -107,6 +108,7 @@ footer{
     padding: 1rem;
     color: white;
     text-align: center;
+    margin-top: auto;
    
 }
 .footer-contacts {
