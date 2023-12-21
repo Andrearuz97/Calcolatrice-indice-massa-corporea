@@ -1,81 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
- body{
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
     font-family: 'Oswald', sans-serif;
-    background-image:url(../img/bg-image.jpeg);
+    background-image: url(../img/bg-image.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
 }
+
 main {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.1rem;
+    flex: 1; 
 }
-.container2{
-   text-align: center;
-   margin-block: 2rem;
-   h1,h2{
+
+.container2 {
+    text-align: center;
+    margin-block: 2rem;
+}
+
+h1, h2 {
     margin: 0;
-   }
 }
+
 .container {
     display: inline-block;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
 }
-
-  
 
 input[type="number"], select {
     border-radius: 5px;
     border: 1px solid #ddd;
 }
-select:focus, input:focus{
-box-shadow: none !important;
-outline: none;
-border: none;
+
+select:focus, input:focus {
+    box-shadow: none !important;
+    outline: none;
+    border: none;
 }
-#buttons{
-display: flex;
-align-items: center;
-justify-content: space-evenly;
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .btnn {
     background-color: #0ed60e;
-    color:black;
+    color: black;
     border-radius: 10px;
     padding: 0.7rem;
     margin-block: 1.2rem;
     border: none;
 }
-.btnn:active{
+
+.btnn:active {
     background-color: red !important;
     color: black !important;
 }
 
 @media (min-width: 900px) {
     .btnn:hover {
-        background-color:#06e806;
+        background-color: #06e806;
         color: black;
     }
-    .btnn:active{
+    .btnn:active {
         background-color: red !important;
         color: black !important;
     }
 }
-
 
 .bmiValue {
     font-weight: bold;
@@ -84,33 +93,37 @@ justify-content: space-evenly;
 
 .statusValue {
     font-style: bolder;
-    color:green;
+    color: green;
 }
-form label{
-    font-weight:600;
-    padding-left: 0.2rem ;
+
+form label {
+    font-weight: 600;
+    padding-left: 0.2rem;
 }
-.results{
+
+.results {
     display: flex;
     justify-content: space-between;
 }
-#descrizione{
+
+#descrizione {
     font-size: 1.2rem;
     text-align: center;
 }
-.descrizione{
+
+.descrizione {
     display: flex;
     flex-direction: column;
 }
-footer{
+
+footer {
     background-color: #333;
-    width: 100%;
-    padding: 1rem;
     color: white;
     text-align: center;
-    margin-top: auto;
-   
+    padding: 1rem;
+    margin-top: auto; 
 }
+
 .footer-contacts {
     margin-bottom: 1rem;
     color: white;
@@ -120,22 +133,23 @@ footer{
     margin-right: 10px;
     display: inline-block;
 }
+
 .footer-contacts i {
     font-size: 1.5rem;
     color: white;
     transition: ease 1s;
-   
 }
-.footer-contacts i:active{
+
+.footer-contacts i:active {
     color: red;
 }
+
 @media (min-width: 900px) {
-.footer-contacts i:hover{
-    transform: scale(1.6);
-    transition: ease 1s;
-    color: green;
-   
-}
+    .footer-contacts i:hover {
+        transform: scale(1.6);
+        transition: ease 1s;
+        color: green;
+    }
 }
 
 .disclaimer {
