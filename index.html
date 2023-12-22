@@ -20,7 +20,7 @@
             <form id="bmiForm">
             <h3 class="text-center">Calcolatore BMI</h3>
             <div class="form-group">
-                <label for="weight">Nome: (Opzionale)</label>
+                <label class="aria-labels" for="weight">Nome: (Opzionale)</label>
                 <input type="text" class="form-control" id="nome">
             </div>
             <div class="form-group">
@@ -51,10 +51,12 @@
         </form>
         <div id="allResults">
         <div class="results">
-            <h4><span id="bmiResult"></span></h4>
-            <h4><span id="bmiStatus"></span></h4>
+            <h6><span id="bmiResult"></span></h6>
+            <h6><span id="bmiStatus"></span></h6>
         </div>
-            <h5><span id="descrizione"></span></h5> 
+        <div class="descrizioneIntera">
+            <h6><span id="descrizione"></span></h6> 
+        </div>
         </div>
          </div>   
     </main>

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-
+/*Main e container*/
 html, body {
     height: 100%;
     margin: 0;
@@ -29,11 +29,11 @@ main {
 .container2 {
     text-align: center;
     margin-block: 2rem;
-}
-
-h1, h2 {
+    h1, h2 {
     margin: 0;
 }
+}
+
 
 .container {
     display: inline-block;
@@ -43,6 +43,7 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
 }
+/*Form*/
 
 input[type="number"], select {
     border-radius: 5px;
@@ -75,7 +76,7 @@ select:focus, input:focus {
     color: black !important;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
     .btnn:hover {
         background-color: #06e806;
         color: black;
@@ -84,15 +85,30 @@ select:focus, input:focus {
         background-color: red !important;
         color: black !important;
     }
+    .descrizioneIntera{
+        text-align: center !important;
+    }
+    .results {
+      
+        h6{
+            font-size: 1.5rem;
+        } 
+       
+    }
+    .descrizioneIntera h6{
+        font-size: 1.2rem !important;
+    }
+    .bmiStatus {
+        color: green;
+        margin-bottom: 2.5rem !important;
+    }
 }
 
 .bmiValue {
-    font-weight: bold;
     color: rgb(244, 12, 12);
 }
 
 .statusValue {
-    font-style: bolder;
     color: green;
 }
 
@@ -100,20 +116,14 @@ form label {
     font-weight: 600;
     padding-left: 0.2rem;
 }
-
 .results {
     display: flex;
-    justify-content: space-between;
-}
-
-#descrizione {
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.descrizione {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.descrizioneIntera{
+    text-align: justify;
 }
 
 footer {
