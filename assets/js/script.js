@@ -41,10 +41,13 @@
     
     document.getElementById('bmiStatus').innerHTML = `Condizione: <span class="statusValue">${status}</span>`;
     descrizione.innerHTML = `Ciao ${nome}, ti informo che in base ai dati che ci hai fornito il tuo indice di massa corporea è di <span class="bmiValue">${bmi}</span>. Sei in una condizione di <span class="statusValue">${status}</span>.`;
+});
 
-    reset.addEventListener('click', function(){
-        results.innerHTML = ''
-    })
+    document.getElementById('resetButton').addEventListener('click', function() {
+        document.getElementById('bmiForm').reset(); 
+        document.getElementById('bmiResult').innerHTML = ''; 
+        document.getElementById('bmiStatus').innerHTML = '';
+        document.getElementById('descrizione').innerHTML = '';
 });
 //anno aggiornato
     let date = new Date().getFullYear();
